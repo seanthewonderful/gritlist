@@ -1,0 +1,24 @@
+{
+  "name": "gritlist2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@streamparser/json": "^0.0.6",
+    "axios": "^1.7.7",
+    "commander": "^6.2.1",
+    "express": "^4.21.1",
+    "json2csv": "^6.0.0-alpha.2",
+    "lodash.get": "^4.4.2",
+    "serpapi": "^2.1.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
