@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/search", async (req, res) => {
+    console.log("Received request:", req.body);
     try {
         const results = await fetchAndUpdateResults(req.body);
         res.json(results);
