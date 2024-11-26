@@ -1,10 +1,12 @@
 import express from "express";
-import fetchAndUpdateResults from "../search.js";
+import fetchAndUpdateResults from "../public/search.js";
+import path from "path";
 
 const app = express();
 const port = 3333;
+const __dirname = path.resolve();
 
-app.use(express.static("."));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
 app.get("/", (req, res) => {

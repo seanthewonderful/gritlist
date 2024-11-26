@@ -14,7 +14,6 @@ document
         currentStart = parseInt(
             document.getElementById("startNumber").value
         );
-        // allResults = [];
         searchAndDisplay();
     });
 
