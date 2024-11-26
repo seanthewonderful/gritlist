@@ -1,5 +1,5 @@
 import express from "express";
-import fetchAndUpdateResults from "./search.js";
+import fetchAndUpdateResults from "../search.js";
 
 const app = express();
 const port = 3333;
@@ -34,3 +34,5 @@ app.listen(port, () => {
 }).on("error", (err) => {
     console.error("Error starting server:", err);
 });
+
+export default app;
