@@ -32,7 +32,7 @@ function searchAndDisplay() {
     };
 
     axios
-        .post("/search", config)
+        .post("/api/search", config)
         .then(function (response) {
             if (!response || !response.data || response.data.length === 0) {
                 alert("No results returned - press 'Search' again. Sometimes Google Maps returns no results even when there are more results.");
