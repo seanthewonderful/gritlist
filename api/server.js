@@ -1,3 +1,5 @@
+console.log("Serverless function loaded");
+
 import express from "express";
 import fetchAndUpdateResults from "../public/search.js";
 import path from "path";
@@ -34,11 +36,5 @@ process.on("unhandledRejection", (reason, promise) => {
     console.error("Unhandled Rejection at:", promise, "reason:", reason);
     // Application specific logging, throwing an error, or other logic here
 });
-
-// app.listen(port, () => {
-//     console.log(`Server running at http://localhost:${port}`);
-// }).on("error", (err) => {
-//     console.error("Error starting server:", err);
-// });
 
 export default app;
