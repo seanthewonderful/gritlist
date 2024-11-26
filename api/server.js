@@ -6,12 +6,15 @@ const app = express();
 const port = 3333;
 const __dirname = path.resolve();
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public", "index.html")));
 app.use(express.json());
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
+
+// Avoid conflict: /api/* should not be served as static content
+app.use("/api", (req, res, next) => next()); // Prevents static serving of API routes
 
 app.post("/search", async (req, res) => {
     try {
