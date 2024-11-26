@@ -14,7 +14,6 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/api/search", async (req, res) => {
-    console.log("Received request:", req.body);
     try {
         const results = await fetchAndUpdateResults(req.body);
         res.json(results);
@@ -32,10 +31,5 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
-
-// process.on("unhandledRejection", (reason, promise) => {
-//     console.error("Unhandled Rejection at:", promise, "reason:", reason);
-//     // Application specific logging, throwing an error, or other logic here
-// });
 
 export default app;
