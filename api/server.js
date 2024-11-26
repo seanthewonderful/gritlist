@@ -29,10 +29,10 @@ process.on("unhandledRejection", (reason, promise) => {
     // Application specific logging, throwing an error, or other logic here
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-}).on("error", (err) => {
-    console.error("Error starting server:", err);
-});
+// app.listen(port, () => {
+//     console.log(`Server running at http://localhost:${port}`);
+// }).on("error", (err) => {
+//     console.error("Error starting server:", err);
+// });
 
 export default app;
