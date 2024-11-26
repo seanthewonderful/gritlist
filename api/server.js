@@ -33,9 +33,9 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-process.on("unhandledRejection", (reason, promise) => {
-    console.error("Unhandled Rejection at:", promise, "reason:", reason);
-    // Application specific logging, throwing an error, or other logic here
-});
+// process.on("unhandledRejection", (reason, promise) => {
+//     console.error("Unhandled Rejection at:", promise, "reason:", reason);
+//     // Application specific logging, throwing an error, or other logic here
+// });
 
 export default app;
