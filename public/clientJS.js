@@ -54,6 +54,8 @@ function searchAndDisplay() {
         })
         .catch(function (error) {
             console.error("Error:", error);
+            document.getElementById("errorMessage").textContent =
+                "Error: " + error.response.data.details;
         });
 }
 
